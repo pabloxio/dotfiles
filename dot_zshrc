@@ -1,6 +1,6 @@
 # vim: ft=zsh
 
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 eval "$(starship init zsh)"
 
 plugins=(
@@ -10,7 +10,7 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+source ${ZSH}/oh-my-zsh.sh
 
 # Tmux
 export EDITOR=vim
@@ -18,7 +18,7 @@ export EDITOR=vim
 # asdf
 [ -f ${HOME}/.asdf/asdf.sh ] && source ${HOME}/.asdf/asdf.sh
 
-## Loading /Users/pablox/.zsh.d/* config files
-for ZSH_CONFIG_FILE in /Users/pablox/.zsh.d/*; do
-    source "$ZSH_CONFIG_FILE"
+## Loading ${HOME}.zsh.d/* config files
+for ZSH_CONFIG_FILE in ${HOME}/.zsh.d/*; do
+    source "${ZSH_CONFIG_FILE}"
 done
