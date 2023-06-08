@@ -1,0 +1,12 @@
+# vim: ft=zsh
+{{ if eq .chezmoi.os "darwin" }}
+# aws-vault
+alias av-exec='aws-vault exec $AWSVAULT --duration=${AWSVAULT_DURATION:-1h} -- '
+alias av-creds='aws-vault exec $AWSVAULT --duration=1h -- env |grep ^AWS_ |while read line; do echo export "$line"; done'
+alias av-login='aws-vault login $AWSVAULT'
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+# MicroK8S
+alias mkube='microk8s kubectl'
+{{ end }}

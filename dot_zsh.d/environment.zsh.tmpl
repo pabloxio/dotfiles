@@ -1,0 +1,37 @@
+# vim: ft=zsh
+
+export ANSIBLE_NOCOWS=1
+export HISTCONTROL=ignoreboth
+export PIPENV_VENV_IN_PROJECT=1
+export PULUMI_CONFIG_PASSPHRASE=pablox
+export SAM_CLI_TELEMETRY=0
+
+# FIXME Deprecate in favor of Nvim Telescope man_pages
+export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma norelativenumber' -\""
+
+# Golang
+export GOBIN="$HOME/bin"
+export PATH="$PATH:$GOBIN"
+if [ ! -d "$GOBIN" ]; then
+    mkdir $GOBIN
+fi
+
+{{ if eq .chezmoi.os "darwin" }}
+# Finding dirs to add find /usr/local/opt -type d -follow -name gnubin -print
+# find /opt -type d -follow -name gnubin -print
+# find /opt/homebrew/opt -type d -follow -name gnubin -print
+GNUBINS="/opt/homebrew/opt/libtool/libexec/gnubin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/gnu-indent/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:/opt/homebrew/opt/ed/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gsed/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-which/libexec/gnubin"
+export PATH="$GNUBINS:$PATH";
+
+# UTILSBIN="/usr/local/opt/zip/bin:/usr/local/opt/zip/bin"
+# export PATH="$UTILSBIN:$PATH";
+
+# Brew
+export PGBIN="/opt/homebrew/opt/postgresql@12/bin"
+if [ -d "$PGBIN" ]; then
+    export PATH="$PGBIN:$PATH";
+fi
+{{ end }}
+
+# vi-mode
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
