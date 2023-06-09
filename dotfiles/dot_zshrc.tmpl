@@ -7,7 +7,9 @@ if [ -f /etc/profile.d/apps-bin-path.sh ]; then
     . /etc/profile.d/apps-bin-path.sh
 fi
 {{ end }}
-
+{{ if eq .chezmoi.os "darwin" }}
+export XDG_CONFIG_HOME="${HOME}/.config"
+{{ end }}
 # oh-my-zsh
 export DISABLE_AUTO_UPDATE="true"
 
