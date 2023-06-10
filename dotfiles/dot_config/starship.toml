@@ -1,0 +1,109 @@
+# vim: filetype=toml
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$c\
+$cmake\
+$golang\
+$helm\
+$lua\
+$nodejs\
+$pulumi\
+$python\
+$ruby\
+$rust\
+$terraform\
+$aws\
+$env_var\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$container\
+$shell\
+$character"""
+
+[env_var.ENVIRONMENT]
+default = ""
+format = "[$env_value]($style) "
+style = "yellow"
+
+[env_var.AWSVAULT]
+default = ""
+format = "[$env_value]($style) "
+style = "yellow"
+
+[aws]
+symbol = "  "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[c]
+symbol = " "
+
+[cmd_duration]
+show_milliseconds = true
+min_time = 1_500
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+disabled = true
+
+[python]
+symbol = " "
+python_binary = ["./venv/bin/python3", "python3"]
+
+[rust]
+symbol = " "
+
+# [shell]
+# zsh_indicator = "_"
+# disabled = false
+
+# [shlvl]
+# disabled = false
+# format = "$shlvl level(s) down"
+# threshold = 3
+
+[status]
+disabled = false
+symbol = "✗ "
+
+[username]
+style_user = "bold dimmed green"
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = false
+style = "bold dimmed green"
+format = "[$ssh_symbol$hostname]($style) "
