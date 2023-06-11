@@ -1,3 +1,6 @@
 [submodule "dotfiles/dot_config/external_nvim"]
 	path = dotfiles/dot_config/external_nvim
 	url = https://github.com/AstroNvim/AstroNvim
+[submodule "dotfiles/external_dot_asdf"]
+	path = dotfiles/external_dot_asdf
+	url = https://github.com/asdf-vm/asdf
