@@ -1,0 +1,28 @@
+# vim: filetype=gitconfig
+
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[core]
+	trustctime = false
+	excludesFile = ~/.gitignore
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[url "ssh://git@github.com/"]
+; [url "git@github.com:"]
+  insteadOf = https://github.com/
+[merge]
+	tool = vimdiff
+	conflictStyle = diff3
+[mergetool]
+	prompt = false
+	keepBackup = false
