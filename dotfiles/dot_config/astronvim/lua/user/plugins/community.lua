@@ -8,7 +8,7 @@ return {
     { import = "astrocommunity.colorscheme.nord-nvim" },
     -- Bufferline
     { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
-    -- Util
-    { import = "astrocommunity.completion.copilot-lua" },
+    -- Completion
+    { import = "astrocommunity.completion.copilot-lua-cmp" },
   }
 }
