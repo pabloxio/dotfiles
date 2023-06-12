@@ -10,10 +10,11 @@ export SAM_CLI_TELEMETRY=0
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma norelativenumber' -\""
 
 # Golang
-export GOBIN="$HOME/bin"
-export PATH="$PATH:$GOBIN"
-if [ ! -d "$GOBIN" ]; then
-    mkdir $GOBIN
+export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin"
+export PATH="${PATH}:${GOBIN}"
+if [ ! -d "${GOBIN}" ]; then
+    mkdir -p ${GOBIN}
 fi
 
 {{ if eq .chezmoi.os "darwin" }}
