@@ -2,26 +2,24 @@
 
 export FZF_ALT_C_COMMAND="find -L . -maxdepth 3 -type d \( -path '*/\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \) -prune -o -type d -print 2> /dev/null | cut -b3-"
 
-{{ if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "darwin" }}
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
 fi
-{{ end }}
+{{- end }}
 
 # Auto-completion
-# ---------------
-{{ if eq .chezmoi.os "linux" }}
-[[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/key-bindings.zsh" 2> /dev/null
-{{ end }}
-{{ if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "linux" }}
+[[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/completion.zsh" 2> /dev/null
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
 [[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
-{{ end }}
+{{- end }}
 
 # Key bindings
-# ------------
-{{ if eq .chezmoi.os "linux" }}
-[[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/completion.zsh" 2> /dev/null
-{{ end }}
-{{ if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "linux" }}
+[[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/key-bindings.zsh" 2> /dev/null
+{{- end }}
+{{- if eq .chezmoi.os "darwin" }}
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-{{ end }}
+{{- end }}
