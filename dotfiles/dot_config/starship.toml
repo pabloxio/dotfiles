@@ -1,5 +1,11 @@
 # vim: filetype=toml
 
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
 format = """
 $username\
 $hostname\
@@ -44,56 +50,13 @@ default = ""
 format = "[$env_value]($style) "
 style = "yellow"
 
-[aws]
-symbol = "  "
-
 [character]
 success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
 
-[c]
-symbol = " "
-
 [cmd_duration]
 show_milliseconds = true
 min_time = 1_500
-
-[directory]
-read_only = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[package]
-disabled = true
-
-[python]
-symbol = " "
-python_binary = ["./venv/bin/python3", "python3"]
-
-[rust]
-symbol = " "
-
-# [shell]
-# zsh_indicator = "_"
-# disabled = false
-
-# [shlvl]
-# disabled = false
-# format = "$shlvl level(s) down"
-# threshold = 3
 
 [status]
 disabled = false
@@ -103,7 +66,152 @@ symbol = "✗ "
 style_user = "bold dimmed green"
 format = "[$user]($style)@"
 
+# 
+# Nerd Font Symbols Preset
+# https://starship.rs/presets/nerd-font.html
+#
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
 [hostname]
+ssh_symbol = " "
 ssh_only = false
 style = "bold dimmed green"
 format = "[$ssh_symbol$hostname]($style) "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+disabled = true
+
+[pijul_channel]
+symbol = "🪺 "
+
+[python]
+symbol = " "
+# python_binary = ["./venv/bin/python3", "python3"]
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
