@@ -1,34 +1,18 @@
 # vim: ft=zsh
-{{ if eq .chezmoi.os "linux" }}
-export LC_ALL="en_US.UTF-8"
-
-# Snapd
-if [ -f /etc/profile.d/apps-bin-path.sh ]; then
-    . /etc/profile.d/apps-bin-path.sh
-fi
-{{ end }}
-{{ if eq .chezmoi.os "darwin" }}
-export XDG_CONFIG_HOME="${HOME}/.config"
-{{ end }}
-# oh-my-zsh
-export DISABLE_AUTO_UPDATE="true"
 
 export ZSH="${HOME}/.oh-my-zsh"
-eval "$(starship init zsh)"
 
 plugins=(
   asdf
   direnv
   fzf-tab
   git
+  starship
   vi-mode
   zsh-autosuggestions
 )
 
 source ${ZSH}/oh-my-zsh.sh
-
-# Tmux
-export EDITOR=nvim
 
 # Loading ${HOME}.zsh.d/* config files
 for ZSH_CONFIG_FILE in ${HOME}/.zsh.d/*; do

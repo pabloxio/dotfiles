@@ -1,37 +1,49 @@
 # vim: ft=zsh
 
-export ANSIBLE_NOCOWS=1
+# ZSH
+export DISABLE_AUTO_UPDATE="true"
 export HISTCONTROL=ignoreboth
+# Plugins config
+# vi-mode
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+
+# Utils
+export EDITOR=nvim
+export ANSIBLE_NOCOWS=1
 export PIPENV_VENV_IN_PROJECT=1
-export PULUMI_CONFIG_PASSPHRASE=pablox
 export SAM_CLI_TELEMETRY=0
 
-# FIXME Deprecate in favor of Nvim Telescope man_pages
-export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma norelativenumber' -\""
-
 # Golang
-# export GOPATH="${HOME}/go"
 export GOBIN="${HOME}/go/bin"
 export PATH="${PATH}:${GOBIN}"
 if [ ! -d "${GOBIN}" ]; then
     mkdir -p ${GOBIN}
 fi
-{{ if eq .chezmoi.os "darwin" }}
-# Finding dirs to add find /usr/local/opt -type d -follow -name gnubin -print
-# find /opt -type d -follow -name gnubin -print
-# find /opt/homebrew/opt -type d -follow -name gnubin -print
+{{- if eq .chezmoi.os "darwin" }}
+
+# AstroNvim config
+export XDG_CONFIG_HOME="${HOME}/.config"
+
+#
+# Brew
+#
+# Replacing BSD tools with GNU tools
+#
+# brew install autoconf bash binutils coreutils diffutils ed findutils flex gawk \
+# gnu-indent gnu-sed gnu-tar gnu-which gpatch grep gzip less m4 make nano \
+# screen watch wdiff wget zip
+#
+# Finding GNUBINS, doing this manually to speed up ZSH load time
+#
+# ❯ find $(brew --prefix)/opt -type d -follow -wholename "*/libexec/gnubin" |tr -s '\n' ':' |pbcopy
+#
 GNUBINS="/opt/homebrew/opt/libtool/libexec/gnubin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/gnu-indent/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:/opt/homebrew/opt/ed/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gsed/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-which/libexec/gnubin"
 export PATH="$GNUBINS:$PATH";
-
-# UTILSBIN="/usr/local/opt/zip/bin:/usr/local/opt/zip/bin"
-# export PATH="$UTILSBIN:$PATH";
-
-# Brew
+#
+# PostgreSQL
+#
 export PGBIN="/opt/homebrew/opt/postgresql@12/bin"
 if [ -d "$PGBIN" ]; then
     export PATH="$PGBIN:$PATH";
 fi
-{{ end }}
-
-# vi-mode
-VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+{{- end }}
