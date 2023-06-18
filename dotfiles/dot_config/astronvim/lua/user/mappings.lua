@@ -7,5 +7,6 @@ return {
     ["<leader>tv"] = { "<cmd>vsplit term://zsh<cr>", desc = "New terminal split vertical" },
     -- Telescope
     ["<leader>f/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Find current buffer" },
+    ["<leader>fg"] = { "<cmd>Telescope git_files<cr>", desc = "Find git files" },
   },
 }
