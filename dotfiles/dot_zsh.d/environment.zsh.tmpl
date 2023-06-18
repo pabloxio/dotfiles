@@ -13,12 +13,15 @@ export ANSIBLE_NOCOWS=1
 export PIPENV_VENV_IN_PROJECT=1
 export SAM_CLI_TELEMETRY=0
 
+#
 # Golang
+#
 export GOBIN="${HOME}/go/bin"
 export PATH="${PATH}:${GOBIN}"
 if [ ! -d "${GOBIN}" ]; then
     mkdir -p ${GOBIN}
 fi
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 {{- if eq .chezmoi.os "darwin" }}
 
 # AstroNvim config
