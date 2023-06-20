@@ -5,7 +5,7 @@ env:
 live_config_reload: true
 window:
   startup_mode: Windowed
-  decorations: Buttonless
+  decorations: buttonless
   opacity: 0.99
 font:
   normal:
@@ -19,4 +19,4 @@ cursor:
   blink_interval: 500
 
 import:
-- ~/.alacritty.nord.yaml
+  - ~/.alacritty.nord.yaml
