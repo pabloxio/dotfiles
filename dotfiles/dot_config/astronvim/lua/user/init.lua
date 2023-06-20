@@ -1,11 +1,11 @@
 return {
-  colorscheme = "nord",
+	colorscheme = "nord",
 
-  lsp = {
-    formatting = {
-      format_on_save = {
-        enabled = true,
-      },
-    },
-  },
+	lsp = {
+		formatting = {
+			format_on_save = {
+				enabled = true,
+			},
+		},
+	},
 }
