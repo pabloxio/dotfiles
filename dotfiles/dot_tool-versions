@@ -8,4 +8,5 @@ pipenv 2022.5.2
 poetry 1.5.1
 python 3.10.8
 ruby 3.2.0
+rust 1.70.0
 terraform 1.4.6
