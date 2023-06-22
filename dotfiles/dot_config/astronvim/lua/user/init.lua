@@ -1,5 +1,5 @@
 return {
-	colorscheme = "nord",
+	colorscheme = "tokyonight",
 
 	lsp = {
 		formatting = {

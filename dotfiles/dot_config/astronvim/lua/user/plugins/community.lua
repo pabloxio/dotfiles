@@ -2,6 +2,7 @@ return {
 	"AstroNvim/astrocommunity",
 	-- Themes
 	{ import = "astrocommunity.colorscheme.nord-nvim" },
+	{ import = "astrocommunity.colorscheme.tokyonight-nvim" },
 	-- Bufferline
 	{ import = "astrocommunity.bars-and-lines.bufferline-nvim" },
 	-- Completion
@@ -15,7 +16,7 @@ return {
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.pack.markdown" },
 	{ import = "astrocommunity.pack.nix" },
-	{ import = "astrocommunity.pack.python" },
+	-- { import = "astrocommunity.pack.python" },
 	{ import = "astrocommunity.pack.rust" },
 	{ import = "astrocommunity.pack.tailwindcss" },
 	{ import = "astrocommunity.pack.terraform" },
