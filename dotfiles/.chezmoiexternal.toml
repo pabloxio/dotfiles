@@ -19,6 +19,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+
 # Tmux Plugin Manager
 [".tmux/plugins/tpm"]
     type = "archive"
@@ -26,8 +27,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+
 # AntroNvim
-["~/.config/nvim"]
+[".config/nvim"]
     type = "archive"
     url = "https://github.com/AstroNvim/AstroNvim/archive/master.tar.gz"
     exact = true
