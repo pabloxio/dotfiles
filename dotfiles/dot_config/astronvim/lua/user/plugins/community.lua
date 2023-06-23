@@ -1,6 +1,8 @@
 return {
 	"AstroNvim/astrocommunity",
 	-- Themes
+	{ import = "astrocommunity.colorscheme.catppuccin" },
+	{ import = "astrocommunity.colorscheme.dracula-nvim" },
 	{ import = "astrocommunity.colorscheme.nord-nvim" },
 	{ import = "astrocommunity.colorscheme.tokyonight-nvim" },
 	-- Bufferline

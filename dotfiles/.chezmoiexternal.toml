@@ -36,10 +36,19 @@ exact = true
 stripComponents = 1
 refreshPeriod = "168h"
 
-# Alacritty
+# Alacritty Themes
+#
+# Collection
 [".config/alacritty/themes"]
 type = "archive"
 url = "https://api.github.com/repos/alacritty/alacritty-theme/tarball"
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"
+# Catppuccin
+[".config/alacritty/catppuccin"]
+type = "archive"
+url = "https://api.github.com/repos/catppuccin/alacritty/tarball"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
