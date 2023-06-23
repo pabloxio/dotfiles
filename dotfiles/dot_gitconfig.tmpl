@@ -17,9 +17,11 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+{{- if eq .chezmoi.os "darwin" }}
 [url "ssh://git@github.com/"]
 ; [url "git@github.com:"]
-  insteadOf = https://github.com/
+	insteadOf = https://github.com/
+{{- end }}
 [merge]
 	tool = vimdiff
 	conflictStyle = diff3
