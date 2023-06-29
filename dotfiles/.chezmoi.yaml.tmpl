@@ -1,15 +1,16 @@
 {{ $name := promptString "Name" -}}
 {{ $email := promptString "Email" -}}
-{{ $theme := promptString "Theme (catppuccin|dracula|nord|tokyo)" -}}
+{{ $theme := promptString "Theme (tokyo|dracula|nord|gruvbox)" -}}
 
 data:
     name: {{ $name | quote }}
     email: {{ $email | quote }}
     theme:
         name: {{ $theme | quote }}
-{{- if eq $theme "catppuccin" }}
-        tmux: catppuccin/tmux
-        nvim: catppuccin-latte
+{{- if eq $theme "tokyo" }}
+        alacritty: tokyo-night-storm
+        tmux: fabioluciano/tmux-tokyo-night
+        nvim: tokyonight-storm
 {{- end }}
 {{- if eq $theme "dracula" }}
         alacritty: dracula
@@ -21,8 +22,8 @@ data:
         tmux: arcticicestudio/nord-tmux
         nvim: nord
 {{- end }}
-{{- if eq $theme "tokyo" }}
-        alacritty: tokyo-night-storm
-        tmux: fabioluciano/tmux-tokyo-night
-        nvim: tokyonight-storm
+{{- if eq $theme "gruvbox" }}
+        alacritty: gruvbox_dark
+        tmux: egel/tmux-gruvbox
+        nvim: gruvbox-baby
 {{- end }}

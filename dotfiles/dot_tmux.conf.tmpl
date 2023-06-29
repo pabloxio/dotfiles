@@ -4,11 +4,10 @@ set -g default-terminal "xterm-256color"
 set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # List of plugins
-set -g @plugin "tmux-plugins/tpm"
-
-# set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
-# set -g @plugin 'tmux-plugins/tmux-logging'
+
+# Theme
 set -g @plugin "{{ .theme.tmux }}"
 {{- if eq .theme.name "tokyo" }}
 
@@ -17,9 +16,9 @@ set -g @theme_variation 'storm'
 set -g @theme_left_separator ''
 set -g @theme_right_separator ''
 {{- end }}
-{{- if eq .theme.name "catppuccin" }}
+{{- if eq .theme.name "gruvbox" }}
 
-set -g @catppuccin_flavour 'latte'
+set -g @tmux-gruvbox 'dark'
 {{- end }}
 
 # Initialize TMUX plugin manager
