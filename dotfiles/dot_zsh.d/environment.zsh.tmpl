@@ -51,3 +51,8 @@ if [ -d "$PGBIN" ]; then
     export PATH="$PGBIN:$PATH";
 fi
 {{- end }}
+
+# adding ${HOME}/.local/bin to ${PATH} if present
+if [ -d "${HOME}/.local/bin" ]; then
+    export PATH="${PATH}:${HOME}/.local/bin"
+fi
