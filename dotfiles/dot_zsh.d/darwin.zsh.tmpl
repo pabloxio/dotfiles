@@ -1,28 +1,4 @@
 # vim: ft=zsh
-
-# ZSH
-# Disable oh-my-zsh auto update, chezmoi will handle it
-export DISABLE_AUTO_UPDATE="true"
-export HISTCONTROL=ignoreboth
-# Plugins config
-# vi-mode
-export VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-
-# Utils
-export EDITOR=nvim
-export ANSIBLE_NOCOWS=1
-export PIPENV_VENV_IN_PROJECT=1
-export SAM_CLI_TELEMETRY=0
-
-#
-# Golang
-#
-export GOBIN="${HOME}/go/bin"
-export PATH="${PATH}:${GOBIN}"
-if [ ! -d "${GOBIN}" ]; then
-    mkdir -p ${GOBIN}
-fi
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 {{- if eq .chezmoi.os "darwin" }}
 
 # AstroNvim config
@@ -50,9 +26,11 @@ export PGBIN="/opt/homebrew/opt/postgresql@12/bin"
 if [ -d "$PGBIN" ]; then
     export PATH="$PGBIN:$PATH";
 fi
-{{- end }}
 
-# adding ${HOME}/.local/bin to ${PATH} if present
-if [ -d "${HOME}/.local/bin" ]; then
-    export PATH="${PATH}:${HOME}/.local/bin"
-fi
+#
+# aws-vault
+#
+alias av-exec='aws-vault exec $AWSVAULT --duration=${AWSVAULT_DURATION:-1h} -- '
+alias av-creds='aws-vault exec $AWSVAULT --duration=1h -- env |grep ^AWS_ |while read line; do echo export "$line"; done'
+alias av-login='aws-vault login $AWSVAULT'
+{{- end }}
