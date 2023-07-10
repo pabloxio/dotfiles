@@ -1,4 +1,13 @@
 # vim: ft=zsh
+{{- if eq .chezmoi.os "linux" }}
+
+export LC_ALL="en_US.UTF-8"
+
+# Snapd
+if [ -f /etc/profile.d/apps-bin-path.sh ]; then
+    . /etc/profile.d/apps-bin-path.sh
+fi
+{{- end }}
 
 export ZSH="${HOME}/.oh-my-zsh"
 
