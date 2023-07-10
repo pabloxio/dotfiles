@@ -27,6 +27,6 @@ return {
 	{ import = "astrocommunity.pack.vue" },
 	{ import = "astrocommunity.pack.yaml" },
 	-- Terminal
-	{ import = "astrocommunity.terminal-integration.flatten-nvim" },
+	-- { import = "astrocommunity.terminal-integration.flatten-nvim" },
 	{ import = "astrocommunity.terminal-integration.vim-tpipeline" },
 }
