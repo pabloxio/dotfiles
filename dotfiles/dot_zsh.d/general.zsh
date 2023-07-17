@@ -39,3 +39,9 @@ export EDITOR=nvim
 export ANSIBLE_NOCOWS=1
 export PIPENV_VENV_IN_PROJECT=1
 export SAM_CLI_TELEMETRY=0
+
+
+LOCALBIN="${HOME}/.local/bin"
+if [ -d "${LOCALBIN}" ]; then
+  export PATH="${PATH}:${LOCALBIN}"
+fi
