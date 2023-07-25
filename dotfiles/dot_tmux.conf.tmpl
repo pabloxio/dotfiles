@@ -20,6 +20,11 @@ set -g @theme_right_separator ''
 
 set -g @tmux-gruvbox 'dark'
 {{- end }}
+{{- if eq .theme.name "dracula" }}
+
+set -g @dracula-git-disable-status true
+set -g @dracula-show-fahrenheit false
+{{- end }}
 
 # Initialize TMUX plugin manager
 run -b "~/.tmux/plugins/tpm/tpm"
