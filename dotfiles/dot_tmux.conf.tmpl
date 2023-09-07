@@ -56,8 +56,9 @@ bind k select-pane -U
 bind l select-pane -R
 setw -g mode-keys vi
 
-bind | split-window -h
-bind - split-window -v
+# Open panes using the current directory
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
 bind r source-file ~/.tmux.conf \; display "Tmux configuration file reloaded!"
 
 # Previous windows
