@@ -1,7 +1,7 @@
 -- vim: filetype=lua
 
 return {
-	colorscheme = "{{ .theme.nvim }}",
+	colorscheme = "dracula",
 
 	lsp = {
 		formatting = {
