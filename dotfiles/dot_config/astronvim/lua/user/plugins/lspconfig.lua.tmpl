@@ -1,0 +1,27 @@
+return {
+	"williamboman/mason-lspconfig.nvim",
+	opts = {
+		-- automatic_installation = true,
+		ensure_installed = {
+			"bashls",
+			"docker_compose_language_service",
+			"dockerls",
+			"gopls",
+			"lua_ls",
+			"sqlls",
+			"yamlls",
+{{- if eq .chezmoi.os "darwin" }}
+			"ansiblels",
+			"cssls",
+			"html",
+			"jsonls",
+			"marksman",
+			"solargraph",
+			"tailwindcss",
+			"taplo", -- TOML
+			"tsserver",
+			"vuels",
+{{- end }}
+		},
+	},
+}
