@@ -9,7 +9,8 @@ font:
   normal:
     family: FiraMono Nerd Font
     style: Regular
-  size: 16.5
+  size: 17.5
+  # size: 15
 cursor:
   style:
     blinking: Always
