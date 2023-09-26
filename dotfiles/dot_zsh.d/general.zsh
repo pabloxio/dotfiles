@@ -45,3 +45,6 @@ LOCALBIN="${HOME}/.local/bin"
 if [ -d "${LOCALBIN}" ]; then
   export PATH="${PATH}:${LOCALBIN}"
 fi
+
+# CircleCI cli
+export CIRCLECI_CLI_SKIP_UPDATE_CHECK=true
