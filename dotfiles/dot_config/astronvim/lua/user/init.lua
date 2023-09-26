@@ -1,7 +1,7 @@
 -- vim: filetype=lua
 
 return {
-	colorscheme = "dracula",
+	colorscheme = "nord",
 
 	lsp = {
 		formatting = {
