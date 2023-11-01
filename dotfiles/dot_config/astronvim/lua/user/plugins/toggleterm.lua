@@ -12,7 +12,13 @@ return {
 			WinBar = { link = "WinBar" },
 			WinBarNC = { link = "WinBarNC" },
 		},
-		size = 10,
+		size = function(term)
+			if term.direction == "horizontal" then
+				return vim.o.lines * 0.5
+			elseif term.direction == "vertical" then
+				return vim.o.columns * 0.5
+			end
+		end,
 		on_create = function()
 			vim.opt.foldcolumn = "0"
 			vim.opt.signcolumn = "no"
