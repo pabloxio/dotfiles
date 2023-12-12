@@ -7,7 +7,14 @@ window:
   opacity: 0.99
 font:
   normal:
-    family: FiraMono Nerd Font
+    # family: FiraMono Nerd Font
+    # style: Regular
+    # size: 14.5
+    # family: Lekton Nerd Font
+    # style: Regular
+    # size: 18
+    # family: MesloLGM Nerd Font
+    family: MesloLGSDZ Nerd Font
     style: Regular
   size: 14.5
 cursor:
