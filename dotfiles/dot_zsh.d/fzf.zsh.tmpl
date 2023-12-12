@@ -2,6 +2,10 @@
 
 bindkey "^]" fzf-cd-widget
 export FZF_ALT_C_COMMAND="find -L . -maxdepth 3 -type d \( -path '*/\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \) -prune -o -type d -print 2> /dev/null | cut -b3-"
+# commands which should only be completed with directories
+export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree"
+# Search in a floating tmux pane
+# export FZF_TMUX_OPTS="-p"
 
 {{- if eq .chezmoi.os "linux" }}
 [[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/completion.zsh" 2> /dev/null
