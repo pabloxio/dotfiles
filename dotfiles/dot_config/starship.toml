@@ -215,3 +215,6 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
+
+[kubernetes]
+disabled = false
