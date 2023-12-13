@@ -1,5 +1,6 @@
 awscli 2.10.1
 aws-vault 6.6.2
+aws-iam-authenticator 0.6.11
 helm 3.12.3
 bun 1.0.0
 direnv 2.32.1
