@@ -1,3 +1,5 @@
+# vim: ft=zsh
+
 # Bat - a cat clone with wings
 # https://github.com/sharkdp/bat
 if which bat >/dev/null; then
@@ -24,3 +26,10 @@ if which k9s >/dev/null; then
     alias k9s='av-exec k9s'
   fi
 fi
+{{- if eq .chezmoi.os "darwin" }}
+
+# GNU base64
+if which gbase64 >/dev/null; then
+  alias base64='gbase64'
+fi
+{{- end }}
