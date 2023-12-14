@@ -26,6 +26,12 @@ if which k9s >/dev/null; then
     alias k9s='av-exec k9s'
   fi
 fi
+
+if which terragrunt >/dev/null; then
+  if which aws-vault >/dev/null; then
+    alias terragrunt='av-exec terragrunt'
+  fi
+fi
 {{- if eq .chezmoi.os "darwin" }}
 
 # GNU base64
