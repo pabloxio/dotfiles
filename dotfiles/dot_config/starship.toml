@@ -79,12 +79,7 @@ symbol = " "
 
 [c]
 symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
+format = 'via [$symbol]($style)'
 
 [directory]
 read_only = " 󰌾"
@@ -94,9 +89,7 @@ symbol = " "
 
 [elixir]
 symbol = " "
-
-[elm]
-symbol = " "
+format = 'via [$symbol]($style)'
 
 [fossil_branch]
 symbol = " "
@@ -106,15 +99,6 @@ symbol = " "
 
 [golang]
 symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = "⌘ "
 
 [hg_branch]
 symbol = " "
@@ -127,27 +111,29 @@ format = "[$ssh_symbol$hostname]($style) "
 
 [java]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [julia]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [lua]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [memory_usage]
 symbol = "󰍛 "
 
-[meson]
-symbol = "󰔷 "
-
 [nim]
 symbol = "󰆥 "
+format = 'via [$symbol]($style)'
 
 [nix_shell]
 symbol = " "
 
 [nodejs]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [os.symbols]
 Alpaquita = " "
@@ -196,25 +182,32 @@ disabled = true
 
 [pijul_channel]
 symbol = "🪺 "
+disabled = true
 
 [python]
 symbol = " "
+format = 'via [$symbol]($style)'
 # python_binary = ["./venv/bin/python3", "python3"]
 
 [rlang]
 symbol = "󰟔 "
+format = 'via [$symbol]($style)'
 
 [ruby]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [rust]
 symbol = " "
+format = 'via [$symbol]($style)'
 
 [scala]
 symbol = " "
+disabled = true
 
 [spack]
 symbol = "🅢 "
+disabled = true
 
 [kubernetes]
 disabled = false
