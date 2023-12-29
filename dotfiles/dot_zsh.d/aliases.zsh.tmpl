@@ -32,6 +32,12 @@ if which terragrunt >/dev/null; then
     alias terragrunt='av-exec terragrunt'
   fi
 fi
+
+if which kube-burner >/dev/null; then
+  if which aws-vault >/dev/null; then
+    alias kube-burner='av-exec kube-burner'
+  fi
+fi
 {{- if eq .chezmoi.os "darwin" }}
 
 # GNU base64
