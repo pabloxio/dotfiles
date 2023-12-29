@@ -1,0 +1,23 @@
+import = ["/Users/pablox/.config/alacritty/themes/themes/nord.toml"]
+live_config_reload = true
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "Always"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14.5
+
+[font.normal]
+family = "MesloLGSDZ Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "buttonless"
+opacity = 0.99
+startup_mode = "Windowed"
