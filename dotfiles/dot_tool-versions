@@ -11,6 +11,7 @@ k9s 0.30.8
 kubectl 1.27.3
 lua 5.4.6
 nodejs 18.14.0
+opentofu 1.6.0
 packer 1.9.4
 pipenv 2022.5.2
 poetry 1.5.1
