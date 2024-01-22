@@ -10,6 +10,9 @@ fi
 {{- end }}
 
 export ZSH="${HOME}/.oh-my-zsh"
+# Customization
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Customization
+export ZSH_CUSTOM="${HOME}/.config/zsh/custom"
 
 plugins=(
   aliases
@@ -22,6 +25,7 @@ plugins=(
   vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
+  my_tmux
 )
 
 source ${ZSH}/oh-my-zsh.sh

@@ -7,19 +7,19 @@ refreshPeriod = "168h"
 #
 # oh-my-zsh plugins
 #
-[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+[".config/zsh/custom/plugins/zsh-autosuggestions"]
 type = "archive"
 url = "https://api.github.com/repos/zsh-users/zsh-autosuggestions/tarball"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
-[".oh-my-zsh/custom/plugins/fzf-tab"]
+[".config/zsh/custom/plugins/fzf-tab"]
 type = "archive"
 url = "https://api.github.com/repos/Aloxaf/fzf-tab/tarball"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
-[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+[".config/zsh/custom/plugins/zsh-syntax-highlighting"]
 type = "archive"
 url = "https://api.github.com/repos/zsh-users/zsh-syntax-highlighting/tarball"
 exact = true
