@@ -5,6 +5,7 @@
 #
 # https://zsh.sourceforge.io/Doc/Release/Functions.html#Hook-Functions
 
+# early return if tmux is not present
 command -v tmux &>/dev/null || return
 
 _my_tmux_hook() {
