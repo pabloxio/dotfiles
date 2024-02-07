@@ -27,12 +27,6 @@ if which k9s >/dev/null; then
   fi
 fi
 
-if which terragrunt >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias terragrunt='av-exec terragrunt'
-  fi
-fi
-
 if which kube-burner >/dev/null; then
   if which aws-vault >/dev/null; then
     alias kube-burner='av-exec kube-burner'
@@ -42,6 +36,18 @@ fi
 if which virtctl >/dev/null; then
   if which aws-vault >/dev/null; then
     alias virtctl='av-exec virtctl'
+  fi
+fi
+
+if which helm > /dev/null; then
+  if which aws-vault >/dev/null; then
+    alias helm='av-exec helm'
+  fi
+fi
+
+if which terragrunt >/dev/null; then
+  if which aws-vault >/dev/null; then
+    alias terragrunt='av-exec terragrunt'
   fi
 fi
 {{- if eq .chezmoi.os "darwin" }}
