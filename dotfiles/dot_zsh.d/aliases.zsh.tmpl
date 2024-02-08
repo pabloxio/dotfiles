@@ -50,6 +50,10 @@ if which terragrunt >/dev/null; then
     alias terragrunt='av-exec terragrunt'
   fi
 fi
+
+if which gron >/dev/null; then
+  alias ungron='gron --ungron'
+fi
 {{- if eq .chezmoi.os "darwin" }}
 
 # GNU base64
