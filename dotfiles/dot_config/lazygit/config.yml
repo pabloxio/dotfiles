@@ -105,8 +105,8 @@ keybinding:
     nextItem: <down>
     prevItem-alt: k
     nextItem-alt: j
-    prevPage: ","
-    nextPage: .
+    prevPage: <c-b>
+    nextPage: <c-f>
     scrollLeft: H
     scrollRight: L
     gotoTop: <
