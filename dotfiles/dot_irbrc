@@ -1,0 +1,33 @@
+# vim: filetype=ruby
+
+require 'irb/completion'
+
+IRB.conf[:AUTO_INDENT]  = true
+IRB.conf[:SAVE_HISTORY] = 10_000
+IRB.conf[:HISTORY_FILE] = '~/.irb_history'
+IRB.conf[:PROMPT_MODE]  = :DEFAULT
+
+# Some features that make using irb for rails much nicer.
+if ENV['RAILS_ENV'].present?
+  # Per project history
+  IRB.conf[:HISTORY_FILE] = 'tmp/.irb_history' if File.directory? 'tmp'
+
+  # Custom Prompt
+  # https://ruby-doc.org/stdlib-2.0.0/libdoc/irb/rdoc/IRB.html#module-IRB-label-Customizing+the+IRB+Prompt
+  rails_app_name = Rails.application.class.module_parent_name.underscore
+  prompt_prefix = "[#{rails_app_name}_#{Rails.env}]"
+
+  # Red for production, Blue everything else
+  color_prefix = Rails.env.development? ? "\e[34m" : "\e[31m"
+
+  prefix = "#{color_prefix}#{prompt_prefix}\e[0m"
+  IRB.conf[:PROMPT][:RAILS] = {
+    PROMPT_I: "#{prefix} %03n:%i> ",
+    PROMPT_S: "#{prefix} %03n:%i%l ",
+    PROMPT_C: "#{prefix} %03n:%i* ",
+    RETURN: "%s\n"
+  }
+  IRB.conf[:PROMPT_MODE] = :RAILS
+end
+
+puts "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL} (#{RUBY_RELEASE_DATE}) #{RUBY_PLATFORM}"
