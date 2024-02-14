@@ -51,6 +51,12 @@ if which terragrunt >/dev/null; then
   fi
 fi
 
+if which argocd >/dev/null; then
+  if which aws-vault >/dev/null; then
+    alias argocd='av-exec argocd'
+  fi
+fi
+
 if which gron >/dev/null; then
   alias ungron='gron --ungron'
 fi
