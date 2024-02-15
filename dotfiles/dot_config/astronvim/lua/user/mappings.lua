@@ -18,6 +18,7 @@ return {
 		-- Telescope
 		["<leader>f/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Find current buffer" },
 		["<leader>fg"] = { "<cmd>Telescope git_files<cr>", desc = "Find git files" },
+		["<leader>ft"] = { "<cmd>Telescope filetypes<cr>", desc = "Find file types" },
 		-- Symbols
 		["<leader>s"] = { "<cmd>AerialToggle<cr>", desc = "Symbols Toggle" },
 	},
