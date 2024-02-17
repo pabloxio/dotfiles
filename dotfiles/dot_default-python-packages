@@ -1,3 +1,4 @@
 awslogs
 pipenv
 pipx
+uv
