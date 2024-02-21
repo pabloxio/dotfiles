@@ -1,5 +1,6 @@
 # vim: ft=zsh
 
+# Custom Binding for fzf-cd-widget
 bindkey "^]" fzf-cd-widget
 export FZF_ALT_C_COMMAND="find -L . -maxdepth 3 -type d \( -path '*/\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \) -prune -o -type d -print 2> /dev/null | cut -b3-"
 # commands which should only be completed with directories

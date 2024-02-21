@@ -2,8 +2,6 @@
 
 # Parking command
 bindkey '^q' push-line
-# Custom Binding
-bindkey "^]" fzf-cd-widget
 
 # History
 #
