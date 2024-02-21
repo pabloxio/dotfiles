@@ -15,9 +15,7 @@ fi
 
 if which kubectl >/dev/null; then
   if which aws-vault >/dev/null; then
-    alias kube='av-exec kubectl'
-  else
-    alias kube='kubectl'
+    alias kubectl='av-exec kubectl'
   fi
 fi
 
