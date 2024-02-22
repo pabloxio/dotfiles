@@ -15,7 +15,8 @@ stripComponents = 1
 refreshPeriod = "168h"
 [".config/zsh/custom/plugins/fzf-tab"]
 type = "archive"
-url = "https://api.github.com/repos/Aloxaf/fzf-tab/tarball"
+# url = "https://api.github.com/repos/Aloxaf/fzf-tab/tarball"
+url = "https://github.com/Aloxaf/fzf-tab/archive/c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9.tar.gz"
 exact = true
 stripComponents = 1
 refreshPeriod = "168h"
