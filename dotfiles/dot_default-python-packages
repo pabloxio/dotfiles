@@ -1,4 +1,5 @@
 awslogs
+cookiecutter
 pipenv
 pipx
 uv
