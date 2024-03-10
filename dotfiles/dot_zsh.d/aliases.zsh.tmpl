@@ -13,48 +13,6 @@ if which aws-vault >/dev/null; then
   alias av-login='aws-vault login $AWSVAULT'
 fi
 
-if which kubectl >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias kubectl='av-exec kubectl'
-  fi
-fi
-
-if which k9s >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias k9s='av-exec k9s'
-  fi
-fi
-
-if which kube-burner >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias kube-burner='av-exec kube-burner'
-  fi
-fi
-
-if which virtctl >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias virtctl='av-exec virtctl'
-  fi
-fi
-
-if which helm > /dev/null; then
-  if which aws-vault >/dev/null; then
-    alias helm='av-exec helm'
-  fi
-fi
-
-if which terragrunt >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias terragrunt='av-exec terragrunt'
-  fi
-fi
-
-if which argocd >/dev/null; then
-  if which aws-vault >/dev/null; then
-    alias argocd='av-exec argocd'
-  fi
-fi
-
 if which gron >/dev/null; then
   alias ungron='gron --ungron'
 fi

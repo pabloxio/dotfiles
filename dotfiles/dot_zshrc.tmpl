@@ -35,3 +35,6 @@ source ${ZSH}/oh-my-zsh.sh
 for ZSH_CONFIG_FILE in ${HOME}/.zsh.d/*; do
     source "${ZSH_CONFIG_FILE}"
 done
+
+# Custom ZSH configuration per folder
+if [ -f "${PWD}/.zshrc" ]; then source "${PWD}/.zshrc"; fi
